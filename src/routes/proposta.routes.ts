@@ -5,7 +5,7 @@ import TiposDeConexao from '../middlewares/tiposDeConexao';
 import validacaoClasseConsumo from '../middlewares/validacaoClasseConsumo';
 import { Router } from 'express';
 import PropostaController from '../controller/PropostaController';
-// precisa importar as rotas aqui
+
 
 
 const propostaRouter = Router();
