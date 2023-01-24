@@ -1,14 +1,14 @@
 import { Request, Response, NextFunction } from 'express';
 import Cliente from '../interfaces/Cliente';
 
-const NumeroDoDocumento = (request: Request<Cliente>, response: Response, next: NextFunction) => {
+const ValidacaoHistoricoDeConsumo = (request: Request<Cliente>, response: Response, next: NextFunction) => {
   const { historicoDeConsumo } = request.body;
 
   // Verifica se historico é ou não um array
   const historicoDeConsumoEhUmArray = Array.isArray(historicoDeConsumo);
   if (!historicoDeConsumoEhUmArray) {
     return response.status(400).json({
-      message: 'O histórico de consumo deve ser um array',
+      error: 'O histórico de consumo deve ser um array',
     });
   }
 
@@ -20,7 +20,7 @@ const NumeroDoDocumento = (request: Request<Cliente>, response: Response, next: 
   const todosOsElementosSaoNumerosInteiros = historicoDeConsumo.every(Number.isInteger);
   if (!todosOsElementosSaoNumerosInteiros) {
     return response.status(400).json({
-      message: 'O histórico de consumo deve ser composto apenas por números inteiros',
+      error: 'O histórico de consumo deve ser composto apenas por números inteiros',
     });
   }
 
@@ -29,7 +29,7 @@ const NumeroDoDocumento = (request: Request<Cliente>, response: Response, next: 
   const quantidadeDeElementosValida = historicoDeConsumo.length >= 3 && historicoDeConsumo.length <= 12;
   if (!quantidadeDeElementosValida) {
     return response.status(400).json({
-      message: 'O histórico de consumo deve conter entre 3 e 12 elementos',
+      error: 'O histórico de consumo deve conter entre 3 e 12 elementos',
     });
   }
  
@@ -37,7 +37,7 @@ const NumeroDoDocumento = (request: Request<Cliente>, response: Response, next: 
   const todosOsElementosEstaoEntreZeroE9999 = historicoDeConsumo.every((elemento) => elemento >= 0 && elemento <= 9999);
   if (!todosOsElementosEstaoEntreZeroE9999) {
     return response.status(400).json({
-      message: 'O histórico de consumo deve conter apenas números entre 0 e 9999',
+      error: 'O histórico de consumo deve conter apenas números entre 0 e 9999',
     });
   }
 
@@ -45,4 +45,4 @@ const NumeroDoDocumento = (request: Request<Cliente>, response: Response, next: 
   next();
 };
 
-export default NumeroDoDocumento;
+export default ValidacaoHistoricoDeConsumo;

@@ -1,7 +1,7 @@
 import { Request, Response, NextFunction } from 'express';
 import Cliente from '../interfaces/Cliente';
 
-const NumeroDoDocumento = (request: Request<Cliente>, response: Response, next: NextFunction) => {
+const ValidacaoNumeroDoDocumento = (request: Request<Cliente>, response: Response, next: NextFunction) => {
   const { numeroDoDocumento } = request.body;
  const regexCPF = new RegExp('^\\d{11}$');
  const regexCNPJ = new RegExp('^\\d{14}$');
@@ -13,4 +13,4 @@ const NumeroDoDocumento = (request: Request<Cliente>, response: Response, next: 
   next();
 };
 
-export default NumeroDoDocumento;
+export default ValidacaoNumeroDoDocumento;

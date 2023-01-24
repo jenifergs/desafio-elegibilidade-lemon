@@ -3,7 +3,7 @@
 <html lang="en">
 
 <head>
-    <title>Code coverage report for middlewares/modalidadeTarifaria.ts</title>
+    <title>Code coverage report for middlewares/numeroDoDocumento.ts</title>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="../prettify.css" />
     <link rel="stylesheet" href="../base.css" />
@@ -19,20 +19,20 @@
 <body>
 <div class='wrapper'>
     <div class='pad1'>
-        <h1><a href="../index.html">All files</a> / <a href="index.html">middlewares</a> modalidadeTarifaria.ts</h1>
+        <h1><a href="../index.html">All files</a> / <a href="index.html">middlewares</a> numeroDoDocumento.ts</h1>
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
                 <span class="strong">100% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>8/8</span>
+                <span class='fraction'>9/9</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
                 <span class="strong">100% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>1/1</span>
+                <span class='fraction'>3/3</span>
             </div>
         
             
@@ -46,7 +46,7 @@
             <div class='fl pad1y space-right2'>
                 <span class="strong">100% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>8/8</span>
+                <span class='fraction'>9/9</span>
             </div>
         
             
@@ -78,17 +78,17 @@
 <a name='L13'></a><a href='#L13'>13</a>
 <a name='L14'></a><a href='#L14'>14</a>
 <a name='L15'></a><a href='#L15'>15</a>
-<a name='L16'></a><a href='#L16'>16</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">5x</span>
+<a name='L16'></a><a href='#L16'>16</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">6x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
 <span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -96,19 +96,19 @@
 <span class="cline-any cline-yes">1x</span></td><td class="text"><pre class="prettyprint lang-js">import { Request, Response, NextFunction } from 'express';
 import Cliente from '../interfaces/Cliente';
 &nbsp;
-const ModalidadeTarifaria = (request: Request&lt;Cliente&gt;, response: Response, next: NextFunction) =&gt; {
-  const { modalidadeTarifaria } = request.body;
-  const modalidadesTarifaria = [
-    'azul', 'branca', 'verde', 'convencional'
-  ]
+const NumeroDoDocumento = (request: Request&lt;Cliente&gt;, response: Response, next: NextFunction) =&gt; {
+  const { numeroDoDocumento } = request.body;
+ const regexCPF = new RegExp('^\\d{11}$');
+ const regexCNPJ = new RegExp('^\\d{14}$');
 &nbsp;
-  if ( !modalidadesTarifaria.includes(modalidadeTarifaria)) {
-    return response.status(400).json({ error: 'Modalidade tarifaria inválida' });
-  }
+ // Se o numero do docuemnto não for um cpf ou não for um cnpj
+ if ( !(regexCPF.test(numeroDoDocumento) || regexCNPJ.test(numeroDoDocumento))) {
+   return response.status(400).json({ error: 'Número do documento inválido' }) // lança o erro
+ }
   next();
 };
 &nbsp;
-export default ModalidadeTarifaria;</pre></td></tr></table></pre>
+export default NumeroDoDocumento;</pre></td></tr></table></pre>
 
                 <div class='push'></div><!-- for sticky footer -->
             </div><!-- /wrapper -->

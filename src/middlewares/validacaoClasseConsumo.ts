@@ -2,7 +2,7 @@
 import { Request, Response, NextFunction } from 'express';
 import Cliente from '../interfaces/Cliente';
 
-const validacaoClasseConsumo = (request: Request<Cliente>, response: Response, next: NextFunction) => {
+const ValidacaoClasseConsumo = (request: Request<Cliente>, response: Response, next: NextFunction) => {
   const { classeDeConsumo } = request.body;
   const classesDeConsumo = [
     'residencial',
@@ -18,4 +18,4 @@ const validacaoClasseConsumo = (request: Request<Cliente>, response: Response, n
   next();
 };
 
-export default validacaoClasseConsumo;
+export default ValidacaoClasseConsumo;

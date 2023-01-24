@@ -1,8 +1,8 @@
-import modalidadeTarifaria from '../middlewares/modalidadeTarifaria';
-import NumeroDoDocumento from '../middlewares/numeroDoDocumento';
-import validarHistoricoDeConsumo from '../middlewares/validarHistoricoDeConsumo';
-import TiposDeConexao from '../middlewares/tiposDeConexao';
-import validacaoClasseConsumo from '../middlewares/validacaoClasseConsumo';
+import ValidacaoModalidadeTarifaria from "../middlewares/validacaoModalidadeTarifaria";
+import ValidacaoNumeroDoDocumento from "../middlewares/validacaoNumeroDoDocumento";
+import ValidacaoTiposDeConexao from "../middlewares/validacaoTiposDeConexao";
+import ValidacaoClasseConsumo from "../middlewares/validacaoClasseConsumo";
+import ValidacaoHistoricoDeConsumo from "../middlewares/validacaoHistoricoDeConsumo";
 import { Router } from 'express';
 import PropostaController from '../controller/PropostaController';
 
@@ -11,6 +11,7 @@ import PropostaController from '../controller/PropostaController';
 const propostaRouter = Router();
 const propostaCliente = new PropostaController();
 
-propostaRouter.post('/proposta', modalidadeTarifaria, NumeroDoDocumento, validarHistoricoDeConsumo, TiposDeConexao, validacaoClasseConsumo, propostaCliente.novaProposta);
+propostaRouter.post('/proposta', ValidacaoModalidadeTarifaria, ValidacaoNumeroDoDocumento, ValidacaoTiposDeConexao, ValidacaoClasseConsumo,
+ValidacaoHistoricoDeConsumo, propostaCliente.novaProposta);
 
 export default propostaRouter;

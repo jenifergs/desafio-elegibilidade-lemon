@@ -1,7 +1,7 @@
 import { Request, Response, NextFunction } from 'express';
 import Cliente from '../interfaces/Cliente';
 
-const ModalidadeTarifaria = (request: Request<Cliente>, response: Response, next: NextFunction) => {
+const ValidacaoModalidadeTarifaria = (request: Request<Cliente>, response: Response, next: NextFunction) => {
   const { modalidadeTarifaria } = request.body;
   const modalidadesTarifaria = [
     'azul', 'branca', 'verde', 'convencional'
@@ -13,4 +13,4 @@ const ModalidadeTarifaria = (request: Request<Cliente>, response: Response, next
   next();
 };
 
-export default ModalidadeTarifaria;
+export default ValidacaoModalidadeTarifaria;
