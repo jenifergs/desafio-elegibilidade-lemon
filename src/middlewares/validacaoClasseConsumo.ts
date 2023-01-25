@@ -1,21 +1,21 @@
 
-import { Request, Response, NextFunction } from 'express';
-import Cliente from '../interfaces/Cliente';
+import { type Request, type Response, type NextFunction } from 'express'
+import type Cliente from '../interfaces/Cliente'
 
-const ValidacaoClasseConsumo = (request: Request<Cliente>, response: Response, next: NextFunction) => {
-  const { classeDeConsumo } = request.body;
+const ValidacaoClasseConsumo = (request: Request<Cliente>, response: Response, next: NextFunction): any => {
+  const { classeDeConsumo } = request.body
   const classesDeConsumo = [
     'residencial',
     'industrial',
     'comercial',
     'rural',
-    'poderPublico',
+    'poderPublico'
   ]
 
-  if ( !classesDeConsumo.includes(classeDeConsumo)) {
-    return response.status(400).json({ error: 'Classe de consumo inválida' });
+  if (!classesDeConsumo.includes(classeDeConsumo)) {
+    return response.status(400).json({ error: 'Classe de consumo inválida' })
   }
-  next();
-};
+  next()
+}
 
-export default ValidacaoClasseConsumo;
+export default ValidacaoClasseConsumo

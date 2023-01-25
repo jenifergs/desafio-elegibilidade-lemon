@@ -3,7 +3,7 @@
 <html lang="en">
 
 <head>
-    <title>Code coverage report for testes/mocks/respostas.mock.ts</title>
+    <title>Code coverage report for src/middlewares/validacaoTiposDeConexao.ts</title>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="../../prettify.css" />
     <link rel="stylesheet" href="../../base.css" />
@@ -19,34 +19,34 @@
 <body>
 <div class='wrapper'>
     <div class='pad1'>
-        <h1><a href="../../index.html">All files</a> / <a href="index.html">testes/mocks</a> respostas.mock.ts</h1>
+        <h1><a href="../../index.html">All files</a> / <a href="index.html">src/middlewares</a> validacaoTiposDeConexao.ts</h1>
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
                 <span class="strong">100% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>3/3</span>
+                <span class='fraction'>10/10</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
                 <span class="strong">100% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>0/0</span>
-            </div>
-        
-            
-            <div class='fl pad1y space-right2'>
-                <span class="strong">100% </span>
-                <span class="quiet">Functions</span>
                 <span class='fraction'>1/1</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
                 <span class="strong">100% </span>
-                <span class="quiet">Lines</span>
+                <span class="quiet">Functions</span>
                 <span class='fraction'>2/2</span>
+            </div>
+        
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">100% </span>
+                <span class="quiet">Lines</span>
+                <span class='fraction'>10/10</span>
             </div>
         
             
@@ -80,41 +80,47 @@
 <a name='L15'></a><a href='#L15'>15</a>
 <a name='L16'></a><a href='#L16'>16</a>
 <a name='L17'></a><a href='#L17'>17</a>
-<a name='L18'></a><a href='#L18'>18</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">10x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
+<a name='L18'></a><a href='#L18'>18</a>
+<a name='L19'></a><a href='#L19'>19</a>
+<a name='L20'></a><a href='#L20'>20</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">9x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">4x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">const respostaPropostaAceita = {
-    resultado: {
-      elegivel: true,
-      economiaAnualDeCO2: 5553.24,
-    }
-}
+<span class="cline-any cline-yes">2x</span></td><td class="text"><pre class="prettyprint lang-js">import { Request, Response, NextFunction } from 'express';
+import Cliente from '../interfaces/Cliente';
 &nbsp;
-const respostaPropostaRecusada = {
-  resultado: {
-    elegivel: false,
-    razoesInelegibilidade: [
-      "Classe de consumo não aceita",
-      "Modalidade tarifaria não aceita"
-    ]
+const ValidacaoTiposDeConexao = (request: Request&lt;Cliente&gt;, response: Response, next: NextFunction) =&gt; {
+  const { tipoDeConexao } = request.body;
+  const tiposDeConexao = [
+    'monofasico', 'bifasico', 'trifasico'
+  ]
+&nbsp;
+  if ( !tiposDeConexao.includes(tipoDeConexao)) {
+    console.log("oi");
+    return response.status(400).json({ error: 'Tipo de conexao inválida' });
+&nbsp;
   }
-}
+  console.log("oi");
+  
+  next();
+};
 &nbsp;
-export {respostaPropostaAceita, respostaPropostaRecusada}</pre></td></tr></table></pre>
+export default ValidacaoTiposDeConexao;</pre></td></tr></table></pre>
 
                 <div class='push'></div><!-- for sticky footer -->
             </div><!-- /wrapper -->

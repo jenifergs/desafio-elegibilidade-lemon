@@ -1,10 +1,10 @@
 import { Request, Response } from "express";
-import Cliente from "../../interfaces/Cliente";
-import ValidacaoModalidadeTarifaria from "../../middlewares/validacaoModalidadeTarifaria";
-import ValidacaoNumeroDoDocumento from "../../middlewares/validacaoNumeroDoDocumento";
-import ValidacaoTiposDeConexao from "../../middlewares/validacaoTiposDeConexao";
-import ValidacaoClasseConsumo from "../../middlewares/validacaoClasseConsumo";
-import ValidacaoHistoricoDeConsumo from "../../middlewares/validacaoHistoricoDeConsumo";
+import Cliente from "../../src/interfaces/Cliente";
+import ValidacaoModalidadeTarifaria from "../../src/middlewares/validacaoModalidadeTarifaria";
+import ValidacaoNumeroDoDocumento from "../../src/middlewares/validacaoNumeroDoDocumento";
+import ValidacaoTiposDeConexao from "../../src/middlewares/validacaoTiposDeConexao";
+import ValidacaoClasseConsumo from "../../src/middlewares/validacaoClasseConsumo";
+import ValidacaoHistoricoDeConsumo from "../../src/middlewares/validacaoHistoricoDeConsumo";
 
 describe('testando middlewares', () => {
   it('Middleware - MODALIDADE TARIFARIA : deve retornar erro quando a modalidade tarifaria for inválida', () => {

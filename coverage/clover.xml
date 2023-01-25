@@ -1,138 +1,177 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1674566227593" clover="3.2.0">
-  <project timestamp="1674566227593" name="All files">
-    <metrics statements="94" coveredstatements="94" conditionals="26" coveredconditionals="26" methods="23" coveredmethods="23" elements="143" coveredelements="143" complexity="0" loc="94" ncloc="94" packages="4" files="9" classes="9"/>
-    <package name="controller">
-      <metrics statements="10" coveredstatements="10" conditionals="2" coveredconditionals="2" methods="3" coveredmethods="3"/>
-      <file name="PropostaController.ts" path="/home/jenifergs/lemon-challenge/src/controller/PropostaController.ts">
-        <metrics statements="10" coveredstatements="10" conditionals="2" coveredconditionals="2" methods="3" coveredmethods="3"/>
-        <line num="1" count="9" type="stmt"/>
-        <line num="2" count="1" type="stmt"/>
-        <line num="9" count="5" type="cond" truecount="2" falsecount="0"/>
-        <line num="12" count="5" type="stmt"/>
+<coverage generated="1674569702302" clover="3.2.0">
+  <project timestamp="1674569702302" name="All files">
+    <metrics statements="121" coveredstatements="121" conditionals="26" coveredconditionals="26" methods="31" coveredmethods="29" elements="178" coveredelements="176" complexity="0" loc="121" ncloc="121" packages="6" files="11" classes="11"/>
+    <package name="src">
+      <metrics statements="16" coveredstatements="16" conditionals="0" coveredconditionals="0" methods="7" coveredmethods="5"/>
+      <file name="App.ts" path="C:\Users\jenif\Desktop\lemon-challenge\src\App.ts">
+        <metrics statements="16" coveredstatements="16" conditionals="0" coveredconditionals="0" methods="7" coveredmethods="5"/>
+        <line num="1" count="8" type="stmt"/>
+        <line num="4" count="1" type="stmt"/>
+        <line num="11" count="3" type="stmt"/>
         <line num="13" count="3" type="stmt"/>
         <line num="15" count="3" type="stmt"/>
         <line num="16" count="3" type="stmt"/>
-        <line num="17" count="2" type="stmt"/>
+        <line num="20" count="3" type="stmt"/>
+        <line num="21" count="3" type="stmt"/>
+        <line num="22" count="3" type="stmt"/>
+        <line num="23" count="3" type="stmt"/>
+        <line num="24" count="3" type="stmt"/>
+        <line num="27" count="3" type="stmt"/>
+        <line num="28" count="3" type="stmt"/>
+        <line num="36" count="2" type="stmt"/>
+        <line num="37" count="2" type="stmt"/>
+        <line num="42" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.controller">
+      <metrics statements="10" coveredstatements="10" conditionals="2" coveredconditionals="2" methods="3" coveredmethods="3"/>
+      <file name="PropostaController.ts" path="C:\Users\jenif\Desktop\lemon-challenge\src\controller\PropostaController.ts">
+        <metrics statements="10" coveredstatements="10" conditionals="2" coveredconditionals="2" methods="3" coveredmethods="3"/>
+        <line num="1" count="13" type="stmt"/>
+        <line num="2" count="2" type="stmt"/>
+        <line num="9" count="6" type="cond" truecount="2" falsecount="0"/>
+        <line num="12" count="6" type="stmt"/>
+        <line num="13" count="5" type="stmt"/>
+        <line num="15" count="5" type="stmt"/>
+        <line num="16" count="5" type="stmt"/>
+        <line num="17" count="4" type="stmt"/>
         <line num="19" count="1" type="stmt"/>
         <line num="20" count="1" type="stmt"/>
       </file>
     </package>
-    <package name="middlewares">
+    <package name="src.middlewares">
       <metrics statements="52" coveredstatements="52" conditionals="14" coveredconditionals="14" methods="11" coveredmethods="11"/>
-      <file name="validacaoClasseConsumo.ts" path="/home/jenifergs/lemon-challenge/src/middlewares/validacaoClasseConsumo.ts">
+      <file name="validacaoClasseConsumo.ts" path="C:\Users\jenif\Desktop\lemon-challenge\src\middlewares\validacaoClasseConsumo.ts">
         <metrics statements="8" coveredstatements="8" conditionals="1" coveredconditionals="1" methods="2" coveredmethods="2"/>
-        <line num="1" count="5" type="stmt"/>
-        <line num="5" count="1" type="stmt"/>
-        <line num="6" count="2" type="stmt"/>
-        <line num="7" count="2" type="stmt"/>
-        <line num="15" count="2" type="cond" truecount="1" falsecount="0"/>
+        <line num="1" count="9" type="stmt"/>
+        <line num="5" count="2" type="stmt"/>
+        <line num="6" count="4" type="stmt"/>
+        <line num="7" count="4" type="stmt"/>
+        <line num="15" count="4" type="cond" truecount="1" falsecount="0"/>
         <line num="16" count="1" type="stmt"/>
-        <line num="18" count="1" type="stmt"/>
-        <line num="21" count="1" type="stmt"/>
+        <line num="18" count="3" type="stmt"/>
+        <line num="21" count="2" type="stmt"/>
       </file>
-      <file name="validacaoHistoricoDeConsumo.ts" path="/home/jenifergs/lemon-challenge/src/middlewares/validacaoHistoricoDeConsumo.ts">
+      <file name="validacaoHistoricoDeConsumo.ts" path="C:\Users\jenif\Desktop\lemon-challenge\src\middlewares\validacaoHistoricoDeConsumo.ts">
         <metrics statements="17" coveredstatements="17" conditionals="8" coveredconditionals="8" methods="3" coveredmethods="3"/>
-        <line num="1" count="10" type="stmt"/>
-        <line num="4" count="1" type="stmt"/>
-        <line num="5" count="7" type="stmt"/>
-        <line num="8" count="7" type="stmt"/>
-        <line num="9" count="7" type="cond" truecount="1" falsecount="0"/>
+        <line num="1" count="14" type="stmt"/>
+        <line num="4" count="2" type="stmt"/>
+        <line num="5" count="9" type="stmt"/>
+        <line num="8" count="9" type="stmt"/>
+        <line num="9" count="9" type="cond" truecount="1" falsecount="0"/>
         <line num="10" count="1" type="stmt"/>
-        <line num="20" count="6" type="stmt"/>
-        <line num="21" count="6" type="cond" truecount="1" falsecount="0"/>
+        <line num="20" count="8" type="stmt"/>
+        <line num="21" count="8" type="cond" truecount="1" falsecount="0"/>
         <line num="22" count="1" type="stmt"/>
-        <line num="29" count="5" type="cond" truecount="2" falsecount="0"/>
-        <line num="30" count="5" type="cond" truecount="1" falsecount="0"/>
+        <line num="29" count="7" type="cond" truecount="2" falsecount="0"/>
+        <line num="30" count="7" type="cond" truecount="1" falsecount="0"/>
         <line num="31" count="2" type="stmt"/>
-        <line num="37" count="17" type="cond" truecount="2" falsecount="0"/>
-        <line num="38" count="3" type="cond" truecount="1" falsecount="0"/>
+        <line num="37" count="39" type="cond" truecount="2" falsecount="0"/>
+        <line num="38" count="5" type="cond" truecount="1" falsecount="0"/>
         <line num="39" count="2" type="stmt"/>
-        <line num="45" count="1" type="stmt"/>
-        <line num="48" count="1" type="stmt"/>
+        <line num="45" count="3" type="stmt"/>
+        <line num="48" count="2" type="stmt"/>
       </file>
-      <file name="validacaoModalidadeTarifaria.ts" path="/home/jenifergs/lemon-challenge/src/middlewares/validacaoModalidadeTarifaria.ts">
+      <file name="validacaoModalidadeTarifaria.ts" path="C:\Users\jenif\Desktop\lemon-challenge\src\middlewares\validacaoModalidadeTarifaria.ts">
         <metrics statements="8" coveredstatements="8" conditionals="1" coveredconditionals="1" methods="2" coveredmethods="2"/>
-        <line num="1" count="5" type="stmt"/>
-        <line num="4" count="1" type="stmt"/>
-        <line num="5" count="2" type="stmt"/>
-        <line num="6" count="2" type="stmt"/>
-        <line num="10" count="2" type="cond" truecount="1" falsecount="0"/>
+        <line num="1" count="9" type="stmt"/>
+        <line num="4" count="2" type="stmt"/>
+        <line num="5" count="5" type="stmt"/>
+        <line num="6" count="5" type="stmt"/>
+        <line num="10" count="5" type="cond" truecount="1" falsecount="0"/>
         <line num="11" count="1" type="stmt"/>
-        <line num="13" count="1" type="stmt"/>
-        <line num="16" count="1" type="stmt"/>
+        <line num="13" count="4" type="stmt"/>
+        <line num="16" count="2" type="stmt"/>
       </file>
-      <file name="validacaoNumeroDoDocumento.ts" path="/home/jenifergs/lemon-challenge/src/middlewares/validacaoNumeroDoDocumento.ts">
+      <file name="validacaoNumeroDoDocumento.ts" path="C:\Users\jenif\Desktop\lemon-challenge\src\middlewares\validacaoNumeroDoDocumento.ts">
         <metrics statements="9" coveredstatements="9" conditionals="3" coveredconditionals="3" methods="2" coveredmethods="2"/>
-        <line num="1" count="6" type="stmt"/>
-        <line num="4" count="1" type="stmt"/>
-        <line num="5" count="3" type="stmt"/>
-        <line num="6" count="3" type="stmt"/>
-        <line num="7" count="3" type="stmt"/>
-        <line num="10" count="3" type="cond" truecount="3" falsecount="0"/>
-        <line num="11" count="2" type="stmt"/>
-        <line num="13" count="1" type="stmt"/>
-        <line num="16" count="1" type="stmt"/>
+        <line num="1" count="10" type="stmt"/>
+        <line num="4" count="2" type="stmt"/>
+        <line num="5" count="6" type="stmt"/>
+        <line num="6" count="6" type="stmt"/>
+        <line num="7" count="6" type="stmt"/>
+        <line num="10" count="6" type="cond" truecount="3" falsecount="0"/>
+        <line num="11" count="3" type="stmt"/>
+        <line num="13" count="3" type="stmt"/>
+        <line num="16" count="2" type="stmt"/>
       </file>
-      <file name="validacaoTiposDeConexao.ts" path="/home/jenifergs/lemon-challenge/src/middlewares/validacaoTiposDeConexao.ts">
+      <file name="validacaoTiposDeConexao.ts" path="C:\Users\jenif\Desktop\lemon-challenge\src\middlewares\validacaoTiposDeConexao.ts">
         <metrics statements="10" coveredstatements="10" conditionals="1" coveredconditionals="1" methods="2" coveredmethods="2"/>
-        <line num="1" count="5" type="stmt"/>
-        <line num="4" count="1" type="stmt"/>
-        <line num="5" count="2" type="stmt"/>
-        <line num="6" count="2" type="stmt"/>
-        <line num="10" count="2" type="cond" truecount="1" falsecount="0"/>
+        <line num="1" count="9" type="stmt"/>
+        <line num="4" count="2" type="stmt"/>
+        <line num="5" count="4" type="stmt"/>
+        <line num="6" count="4" type="stmt"/>
+        <line num="10" count="4" type="cond" truecount="1" falsecount="0"/>
         <line num="11" count="1" type="stmt"/>
         <line num="12" count="1" type="stmt"/>
-        <line num="15" count="1" type="stmt"/>
-        <line num="17" count="1" type="stmt"/>
-        <line num="20" count="1" type="stmt"/>
+        <line num="15" count="3" type="stmt"/>
+        <line num="17" count="3" type="stmt"/>
+        <line num="20" count="2" type="stmt"/>
       </file>
     </package>
-    <package name="service">
+    <package name="src.routes">
+      <metrics statements="11" coveredstatements="11" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+      <file name="proposta.routes.ts" path="C:\Users\jenif\Desktop\lemon-challenge\src\routes\proposta.routes.ts">
+        <metrics statements="11" coveredstatements="11" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="1" count="6" type="stmt"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="4" count="1" type="stmt"/>
+        <line num="5" count="1" type="stmt"/>
+        <line num="6" count="1" type="stmt"/>
+        <line num="7" count="1" type="stmt"/>
+        <line num="11" count="1" type="stmt"/>
+        <line num="12" count="1" type="stmt"/>
+        <line num="14" count="1" type="stmt"/>
+        <line num="17" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.service">
       <metrics statements="25" coveredstatements="25" conditionals="10" coveredconditionals="10" methods="6" coveredmethods="6"/>
-      <file name="PropostaService.ts" path="/home/jenifergs/lemon-challenge/src/service/PropostaService.ts">
+      <file name="PropostaService.ts" path="C:\Users\jenif\Desktop\lemon-challenge\src\service\PropostaService.ts">
         <metrics statements="25" coveredstatements="25" conditionals="10" coveredconditionals="10" methods="6" coveredmethods="6"/>
-        <line num="1" count="22" type="stmt"/>
-        <line num="8" count="16" type="stmt"/>
-        <line num="12" count="4" type="stmt"/>
-        <line num="13" count="4" type="stmt"/>
-        <line num="16" count="4" type="cond" truecount="1" falsecount="0"/>
-        <line num="17" count="2" type="stmt"/>
-        <line num="25" count="2" type="stmt"/>
-        <line num="26" count="2" type="stmt"/>
-        <line num="30" count="2" type="stmt"/>
-        <line num="40" count="16" type="stmt"/>
-        <line num="44" count="13" type="stmt"/>
-        <line num="45" count="121" type="stmt"/>
-        <line num="48" count="13" type="stmt"/>
-        <line num="51" count="16" type="stmt"/>
-        <line num="52" count="11" type="stmt"/>
-        <line num="54" count="11" type="stmt"/>
-        <line num="60" count="11" type="stmt"/>
-        <line num="66" count="11" type="cond" truecount="1" falsecount="0"/>
-        <line num="67" count="4" type="stmt"/>
-        <line num="71" count="11" type="cond" truecount="1" falsecount="0"/>
-        <line num="72" count="4" type="stmt"/>
-        <line num="77" count="11" type="stmt"/>
-        <line num="79" count="11" type="cond" truecount="7" falsecount="0"/>
+        <line num="1" count="26" type="stmt"/>
+        <line num="8" count="17" type="stmt"/>
+        <line num="12" count="6" type="stmt"/>
+        <line num="13" count="6" type="stmt"/>
+        <line num="16" count="6" type="cond" truecount="1" falsecount="0"/>
+        <line num="17" count="3" type="stmt"/>
+        <line num="25" count="3" type="stmt"/>
+        <line num="26" count="3" type="stmt"/>
+        <line num="30" count="3" type="stmt"/>
+        <line num="40" count="17" type="stmt"/>
+        <line num="44" count="15" type="stmt"/>
+        <line num="45" count="143" type="stmt"/>
+        <line num="48" count="15" type="stmt"/>
+        <line num="51" count="17" type="stmt"/>
+        <line num="52" count="13" type="stmt"/>
+        <line num="54" count="13" type="stmt"/>
+        <line num="60" count="13" type="stmt"/>
+        <line num="66" count="13" type="cond" truecount="1" falsecount="0"/>
+        <line num="67" count="5" type="stmt"/>
+        <line num="71" count="13" type="cond" truecount="1" falsecount="0"/>
+        <line num="72" count="5" type="stmt"/>
+        <line num="77" count="13" type="stmt"/>
+        <line num="79" count="13" type="cond" truecount="7" falsecount="0"/>
         <line num="80" count="3" type="stmt"/>
-        <line num="82" count="11" type="stmt"/>
+        <line num="82" count="13" type="stmt"/>
       </file>
     </package>
     <package name="testes.mocks">
       <metrics statements="7" coveredstatements="7" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="3"/>
-      <file name="proposta.mock.ts" path="/home/jenifergs/lemon-challenge/src/testes/mocks/proposta.mock.ts">
+      <file name="proposta.mock.ts" path="C:\Users\jenif\Desktop\lemon-challenge\testes\mocks\proposta.mock.ts">
         <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
-        <line num="1" count="27" type="stmt"/>
-        <line num="3" count="2" type="stmt"/>
-        <line num="24" count="2" type="stmt"/>
-        <line num="43" count="2" type="stmt"/>
-        <line num="44" count="5" type="stmt"/>
+        <line num="1" count="34" type="stmt"/>
+        <line num="3" count="3" type="stmt"/>
+        <line num="24" count="3" type="stmt"/>
+        <line num="43" count="3" type="stmt"/>
+        <line num="44" count="6" type="stmt"/>
       </file>
-      <file name="respostas.mock.ts" path="/home/jenifergs/lemon-challenge/src/testes/mocks/respostas.mock.ts">
+      <file name="respostas.mock.ts" path="C:\Users\jenif\Desktop\lemon-challenge\testes\mocks\respostas.mock.ts">
         <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
-        <line num="1" count="5" type="stmt"/>
-        <line num="8" count="1" type="stmt"/>
+        <line num="1" count="10" type="stmt"/>
+        <line num="8" count="2" type="stmt"/>
       </file>
     </package>
   </project>

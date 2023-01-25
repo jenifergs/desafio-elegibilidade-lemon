@@ -1,0 +1,149 @@
+openapi: 3.0.0
+info:
+  title: desafio-lemon
+  version: 1.0.0
+servers:
+  - url: http://localhost:5433
+paths:
+  /proposta:
+    post:
+      tags:
+        - default
+      summary: Realiza uma proposta
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              example:
+                numeroDoDocumento: '14041737706'
+                tipoDeConexao: bifasico
+                classeDeConsumo: comercial
+                modalidadeTarifaria: convencional
+                historicoDeConsumo:
+                  - 3878
+                  - 9760
+                  - 5976
+                  - 2797
+                  - 2481
+                  - 5731
+                  - 7538
+                  - 4392
+                  - 7859
+                  - 4160
+                  - 6941
+                  - 4597
+      responses:
+        '200':
+          description: OK
+          headers:
+            X-Powered-By:
+              schema:
+                type: string
+                example: Express
+            Access-Control-Allow-Origin:
+              schema:
+                type: string
+                example: '*'
+            Access-Control-Allow-Methods:
+              schema:
+                type: string
+                example: GET,POST,DELETE,OPTIONS,PUT,PATCH
+            Access-Control-Allow-Headers:
+              schema:
+                type: string
+                example: '*'
+            Content-Type:
+              schema:
+                type: string
+                example: application/json; charset=utf-8
+            Content-Length:
+              schema:
+                type: integer
+                example: '60'
+            ETag:
+              schema:
+                type: string
+                example: W/"3c-bW1f/zTSOs4Hl1d9Rde5biFW/o4"
+            Date:
+              schema:
+                type: string
+                example: Tue, 24 Jan 2023 14:19:45 GMT
+            Connection:
+              schema:
+                type: string
+                example: keep-alive
+            Keep-Alive:
+              schema:
+                type: string
+                example: timeout=5
+          content:
+            application/json:
+              schema:
+                type: object
+              examples:
+                example-0:
+                  summary: Retorna proposta aceita quando dados válidos são informados
+                  value:
+                    resultado:
+                      elegivel: true
+                      economiaAnualDeCO2: 5553.24
+                example-1:
+                  summary: >-
+                    Retorna proposta recusada quando dados inválidos são
+                    informados
+                  value:
+                    resultado:
+                      elegivel: false
+                      razoesInelegibilidade:
+                        - Classe de consumo não aceita
+                        - Modalidade tarifaria não aceita
+        '400':
+          description: Bad Request
+          headers:
+            X-Powered-By:
+              schema:
+                type: string
+                example: Express
+            Access-Control-Allow-Origin:
+              schema:
+                type: string
+                example: '*'
+            Access-Control-Allow-Methods:
+              schema:
+                type: string
+                example: GET,POST,DELETE,OPTIONS,PUT,PATCH
+            Access-Control-Allow-Headers:
+              schema:
+                type: string
+                example: '*'
+            Content-Type:
+              schema:
+                type: string
+                example: application/json; charset=utf-8
+            Content-Length:
+              schema:
+                type: integer
+                example: '42'
+            ETag:
+              schema:
+                type: string
+                example: W/"2a-j8vXZfKPSUDL5wpbA/uoFY+d9fg"
+            Date:
+              schema:
+                type: string
+                example: Tue, 24 Jan 2023 14:22:46 GMT
+            Connection:
+              schema:
+                type: string
+                example: keep-alive
+            Keep-Alive:
+              schema:
+                type: string
+                example: timeout=5
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                error: Número do documento inválido

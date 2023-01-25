@@ -1,4 +1,4 @@
-import Cliente from "../../interfaces/Cliente";
+import Cliente from "../../src/interfaces/Cliente";
 
 const propostaElegivel: Cliente = {
   numeroDoDocumento: "14041737706",

@@ -1,8 +1,8 @@
-import PropostaService from "../../service/PropostaService"
-import PropostaController from "../../controller/PropostaController"
-import { copiaCom, propostaElegivel, propostaInelegivel } from "../mocks/proposta.mock";
+import PropostaService from "../../src/service/PropostaService"
+import PropostaController from "../../src/controller/PropostaController"
+import { propostaElegivel, propostaInelegivel } from "../mocks/proposta.mock";
 import { Request, Response } from "express";
-import Cliente from "../../interfaces/Cliente";
+import Cliente from "../../src/interfaces/Cliente";
 import { respostaPropostaAceita, respostaPropostaRecusada } from "../mocks/respostas.mock";
 
 
