@@ -25,28 +25,28 @@
             <div class='fl pad1y space-right2'>
                 <span class="strong">100% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>25/25</span>
+                <span class='fraction'>30/30</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
                 <span class="strong">100% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>10/10</span>
+                <span class='fraction'>13/13</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
                 <span class="strong">100% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>6/6</span>
+                <span class='fraction'>7/7</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
                 <span class="strong">100% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>25/25</span>
+                <span class='fraction'>30/30</span>
             </div>
         
             
@@ -144,12 +144,7 @@
 <a name='L79'></a><a href='#L79'>79</a>
 <a name='L80'></a><a href='#L80'>80</a>
 <a name='L81'></a><a href='#L81'>81</a>
-<a name='L82'></a><a href='#L82'>82</a>
-<a name='L83'></a><a href='#L83'>83</a>
-<a name='L84'></a><a href='#L84'>84</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">26x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
+<a name='L82'></a><a href='#L82'>82</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">26x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -160,7 +155,6 @@
 <span class="cline-any cline-yes">6x</span>
 <span class="cline-any cline-yes">6x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">6x</span>
 <span class="cline-any cline-yes">3x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -173,20 +167,13 @@
 <span class="cline-any cline-yes">3x</span>
 <span class="cline-any cline-yes">3x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">3x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">17x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">15x</span>
@@ -219,107 +206,114 @@
 <span class="cline-any cline-yes">13x</span>
 <span class="cline-any cline-yes">5x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">13x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">13x</span>
 <span class="cline-any cline-yes">3x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">13x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import Cliente from "../interfaces/Cliente";
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">17x</span>
+<span class="cline-any cline-yes">13x</span>
+<span class="cline-any cline-yes">13x</span>
+<span class="cline-any cline-yes">13x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">13x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import { ResultadoPropostaRejeitada, ResultadoPropostaAceita } from '../interfaces/ResultadoDaProposta'
+import type Cliente from '../interfaces/Cliente'
 &nbsp;
 export default class PropostaService {
+  public novaProposta = async (proposta: Cliente): Promise&lt;ResultadoPropostaAceita | ResultadoPropostaRejeitada&gt; =&gt; {
+    // adicionar regras abaixo:
+    // 1. Verificar se a classe de consumo
+    // 2. Verificar a modalidade tarifaria
+    const consumoMedio = this.calculaConsumeMedio(proposta)
+    const razoesInelegibilidade = this.consultaRazoesInegebilidade(proposta, consumoMedio)
 &nbsp;
-constructor() {
-}
+    if (razoesInelegibilidade.length &gt; 0) {
+      return {
+        elegivel: false,
+        razoesInelegibilidade
 &nbsp;
-public novaProposta = async (proposta: Cliente) =&gt; {
-// adicionar regras abaixo:
-// 1. Verificar se a classe de consumo
-// 2. Verificar a modalidade tarifaria
-const consumoMedio = this.calculaConsumeMedio(proposta);
-  const razoesInelegibilidade = this.consultaRazoesInegebilidade(proposta, consumoMedio);
+      }
+    }
+    // - Para calcular a projeção da **economia anual** de CO2, considere que para serem gerados 1000 kWh no Brasil são emitidos em média 84kg de CO2.
 &nbsp;
+    const consumoAnual = consumoMedio * 12 // o consumo anual é o consumo médio multiplicado por 12
+    const economiaAnualDeCO2 = consumoAnual * (84 / 1000) // a economia anual de CO2 é o consumo anual multiplicado por 84
 &nbsp;
-if(razoesInelegibilidade.length &gt; 0) {
-  return {
-    elegivel: false,
-    razoesInelegibilidade,
-    
+    return {
+      elegivel: true,
+      economiaAnualDeCO2: Number(economiaAnualDeCO2.toFixed(2))
+    }
   }
-} 
-//- Para calcular a projeção da **economia anual** de CO2, considere que para serem gerados 1000 kWh no Brasil são emitidos em média 84kg de CO2.
 &nbsp;
-const consumoAnual = consumoMedio * 12; // o consumo anual é o consumo médio multiplicado por 12
-const economiaAnualDeCO2 = consumoAnual * (84 / 1000); // a economia anual de CO2 é o consumo anual multiplicado por 84
+  public calculaConsumeMedio = (proposta: Cliente): number =&gt; {
+    // soma todos os consumos e divide por 12
+    // retorna o valor do consumo médio
+    const consumo = proposta.historicoDeConsumo.reduce((total, consumo) =&gt; {
+      return total + consumo
+    }, 0)
 &nbsp;
+    return consumo / 12
+  }
 &nbsp;
-&nbsp;
-return {
-  elegivel: true,
-  economiaAnualDeCO2: Number(economiaAnualDeCO2.toFixed(2)),
-}
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-};
-&nbsp;
-public calculaConsumeMedio = (proposta: Cliente) =&gt; {
-&nbsp;
-// soma todos os consumos e divide por 12
-// retorna o valor do consumo médio
-const consumo = proposta.historicoDeConsumo.reduce((total, consumo) =&gt; {
-  return total + consumo;
-}, 0)
-&nbsp;
-return consumo / 12;
-}
-&nbsp;
-  public consultaRazoesInegebilidade = (proposta: Cliente, consumoMedio: number) =&gt; {
-    const razoesInelegibilidade = [];
+  public consultaRazoesInegebilidade = (proposta: Cliente, consumoMedio: number): string[] =&gt; {
+    const razoesInelegibilidade = []
 &nbsp;
     const classesDeConsumoElegiveis = [
       'residencial',
       'industrial',
-      'comercial',
-    ];
+      'comercial'
+    ]
 &nbsp;
     const modalidadesTarifariasElegiveis = [
       'convencional',
-      'branca',
-    ];
+      'branca'
+    ]
     // se a classe de consumo do cliente não for uma das aceitas adicionar ao array
     // indicando as razoes de inelegibilidade da proposta
     if (!classesDeConsumoElegiveis.includes(proposta.classeDeConsumo)) {
-      razoesInelegibilidade.push('Classe de consumo não aceita');
+      razoesInelegibilidade.push('Classe de consumo não aceita')
     }
     // se a modalidade tarifaria do cliente não for uma das aceitas adicionar ao array
     // indicando as razoes de inelegibilidade da proposta
     if (!modalidadesTarifariasElegiveis.includes(proposta.modalidadeTarifaria)) {
-      razoesInelegibilidade.push('Modalidade tarifaria não aceita');
+      razoesInelegibilidade.push('Modalidade tarifaria não aceita')
     }
+    const consumoInvalido = this.calculoConsumoInvalido(proposta, consumoMedio)
     // se o cliente tiver o tipo de conexao monofasica entao consumo medio nao pode ser menor que 400
-    // se o cliente tiver o tipo de conexao bifasica entao consumo medio nao pode ser menor que 500 
+    // se o cliente tiver o tipo de conexao bifasica entao consumo medio nao pode ser menor que 500
     // se o cliente tiver o tipo de conexao trifasica entao consumo medio nao pode ser menor que 750
-    console.log(proposta.tipoDeConexao, consumoMedio);
-    
-    if (proposta.tipoDeConexao === 'monofasica' &amp;&amp; consumoMedio &lt; 400 || proposta.tipoDeConexao === 'bifasica' &amp;&amp; consumoMedio &lt; 500 || proposta.tipoDeConexao === 'trifasica' &amp;&amp; consumoMedio &lt; 750) {
-      razoesInelegibilidade.push('Consumo muito baixo para tipo de conexão'); // adicionar ao array indicando as razoes de inelegibilidade da proposta
+&nbsp;
+    if (consumoInvalido) {
+      razoesInelegibilidade.push('Consumo muito baixo para tipo de conexão') // adicionar ao array indicando as razoes de inelegibilidade da proposta
     }
-    return razoesInelegibilidade;
+    return razoesInelegibilidade
   }
-}</pre></td></tr></table></pre>
+&nbsp;
+  private readonly calculoConsumoInvalido = (proposta: Cliente, consumoMedio: number): boolean =&gt; {
+    const condicaoMonofasica = proposta.tipoDeConexao === 'monofasico' &amp;&amp; consumoMedio &lt; 400
+    const condicaoBifasica = proposta.tipoDeConexao === 'bifasico' &amp;&amp; consumoMedio &lt; 500
+    const condicaoTrifasica = proposta.tipoDeConexao === 'trifasico' &amp;&amp; consumoMedio &lt; 750
+&nbsp;
+    return condicaoMonofasica || condicaoBifasica || condicaoTrifasica
+  }
+}
+&nbsp;</pre></td></tr></table></pre>
 
                 <div class='push'></div><!-- for sticky footer -->
             </div><!-- /wrapper -->
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2023-01-24T14:15:02.276Z
+                at 2023-01-25T13:53:59.144Z
             </div>
         <script src="../../prettify.js"></script>
         <script>

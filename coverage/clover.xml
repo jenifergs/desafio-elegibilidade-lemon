@@ -1,27 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1674569702302" clover="3.2.0">
-  <project timestamp="1674569702302" name="All files">
-    <metrics statements="121" coveredstatements="121" conditionals="26" coveredconditionals="26" methods="31" coveredmethods="29" elements="178" coveredelements="176" complexity="0" loc="121" ncloc="121" packages="6" files="11" classes="11"/>
+<coverage generated="1674654839168" clover="3.2.0">
+  <project timestamp="1674654839168" name="All files">
+    <metrics statements="128" coveredstatements="128" conditionals="29" coveredconditionals="29" methods="32" coveredmethods="30" elements="189" coveredelements="187" complexity="0" loc="128" ncloc="128" packages="6" files="11" classes="11"/>
     <package name="src">
-      <metrics statements="16" coveredstatements="16" conditionals="0" coveredconditionals="0" methods="7" coveredmethods="5"/>
+      <metrics statements="20" coveredstatements="20" conditionals="0" coveredconditionals="0" methods="7" coveredmethods="5"/>
       <file name="App.ts" path="C:\Users\jenif\Desktop\lemon-challenge\src\App.ts">
-        <metrics statements="16" coveredstatements="16" conditionals="0" coveredconditionals="0" methods="7" coveredmethods="5"/>
+        <metrics statements="20" coveredstatements="20" conditionals="0" coveredconditionals="0" methods="7" coveredmethods="5"/>
         <line num="1" count="8" type="stmt"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="3" count="1" type="stmt"/>
         <line num="4" count="1" type="stmt"/>
         <line num="11" count="3" type="stmt"/>
         <line num="13" count="3" type="stmt"/>
         <line num="15" count="3" type="stmt"/>
         <line num="16" count="3" type="stmt"/>
-        <line num="20" count="3" type="stmt"/>
         <line num="21" count="3" type="stmt"/>
         <line num="22" count="3" type="stmt"/>
         <line num="23" count="3" type="stmt"/>
         <line num="24" count="3" type="stmt"/>
-        <line num="27" count="3" type="stmt"/>
+        <line num="25" count="3" type="stmt"/>
         <line num="28" count="3" type="stmt"/>
-        <line num="36" count="2" type="stmt"/>
-        <line num="37" count="2" type="stmt"/>
-        <line num="42" count="1" type="stmt"/>
+        <line num="29" count="3" type="stmt"/>
+        <line num="32" count="3" type="stmt"/>
+        <line num="33" count="3" type="stmt"/>
+        <line num="38" count="2" type="stmt"/>
+        <line num="39" count="2" type="stmt"/>
+        <line num="44" count="1" type="stmt"/>
       </file>
     </package>
     <package name="src.controller">
@@ -41,7 +45,7 @@
       </file>
     </package>
     <package name="src.middlewares">
-      <metrics statements="52" coveredstatements="52" conditionals="14" coveredconditionals="14" methods="11" coveredmethods="11"/>
+      <metrics statements="50" coveredstatements="50" conditionals="14" coveredconditionals="14" methods="11" coveredmethods="11"/>
       <file name="validacaoClasseConsumo.ts" path="C:\Users\jenif\Desktop\lemon-challenge\src\middlewares\validacaoClasseConsumo.ts">
         <metrics statements="8" coveredstatements="8" conditionals="1" coveredconditionals="1" methods="2" coveredmethods="2"/>
         <line num="1" count="9" type="stmt"/>
@@ -61,17 +65,17 @@
         <line num="8" count="9" type="stmt"/>
         <line num="9" count="9" type="cond" truecount="1" falsecount="0"/>
         <line num="10" count="1" type="stmt"/>
-        <line num="20" count="8" type="stmt"/>
-        <line num="21" count="8" type="cond" truecount="1" falsecount="0"/>
-        <line num="22" count="1" type="stmt"/>
-        <line num="29" count="7" type="cond" truecount="2" falsecount="0"/>
-        <line num="30" count="7" type="cond" truecount="1" falsecount="0"/>
-        <line num="31" count="2" type="stmt"/>
-        <line num="37" count="39" type="cond" truecount="2" falsecount="0"/>
-        <line num="38" count="5" type="cond" truecount="1" falsecount="0"/>
-        <line num="39" count="2" type="stmt"/>
-        <line num="45" count="3" type="stmt"/>
-        <line num="48" count="2" type="stmt"/>
+        <line num="19" count="8" type="stmt"/>
+        <line num="20" count="8" type="cond" truecount="1" falsecount="0"/>
+        <line num="21" count="1" type="stmt"/>
+        <line num="27" count="7" type="cond" truecount="2" falsecount="0"/>
+        <line num="28" count="7" type="cond" truecount="1" falsecount="0"/>
+        <line num="29" count="2" type="stmt"/>
+        <line num="35" count="39" type="cond" truecount="2" falsecount="0"/>
+        <line num="36" count="5" type="cond" truecount="1" falsecount="0"/>
+        <line num="37" count="2" type="stmt"/>
+        <line num="42" count="3" type="stmt"/>
+        <line num="45" count="2" type="stmt"/>
       </file>
       <file name="validacaoModalidadeTarifaria.ts" path="C:\Users\jenif\Desktop\lemon-challenge\src\middlewares\validacaoModalidadeTarifaria.ts">
         <metrics statements="8" coveredstatements="8" conditionals="1" coveredconditionals="1" methods="2" coveredmethods="2"/>
@@ -97,17 +101,15 @@
         <line num="16" count="2" type="stmt"/>
       </file>
       <file name="validacaoTiposDeConexao.ts" path="C:\Users\jenif\Desktop\lemon-challenge\src\middlewares\validacaoTiposDeConexao.ts">
-        <metrics statements="10" coveredstatements="10" conditionals="1" coveredconditionals="1" methods="2" coveredmethods="2"/>
+        <metrics statements="8" coveredstatements="8" conditionals="1" coveredconditionals="1" methods="2" coveredmethods="2"/>
         <line num="1" count="9" type="stmt"/>
         <line num="4" count="2" type="stmt"/>
         <line num="5" count="4" type="stmt"/>
         <line num="6" count="4" type="stmt"/>
         <line num="10" count="4" type="cond" truecount="1" falsecount="0"/>
         <line num="11" count="1" type="stmt"/>
-        <line num="12" count="1" type="stmt"/>
-        <line num="15" count="3" type="stmt"/>
-        <line num="17" count="3" type="stmt"/>
-        <line num="20" count="2" type="stmt"/>
+        <line num="14" count="3" type="stmt"/>
+        <line num="17" count="2" type="stmt"/>
       </file>
     </package>
     <package name="src.routes">
@@ -121,41 +123,46 @@
         <line num="5" count="1" type="stmt"/>
         <line num="6" count="1" type="stmt"/>
         <line num="7" count="1" type="stmt"/>
-        <line num="11" count="1" type="stmt"/>
+        <line num="9" count="1" type="stmt"/>
+        <line num="10" count="1" type="stmt"/>
         <line num="12" count="1" type="stmt"/>
-        <line num="14" count="1" type="stmt"/>
-        <line num="17" count="1" type="stmt"/>
+        <line num="15" count="1" type="stmt"/>
       </file>
     </package>
     <package name="src.service">
-      <metrics statements="25" coveredstatements="25" conditionals="10" coveredconditionals="10" methods="6" coveredmethods="6"/>
+      <metrics statements="30" coveredstatements="30" conditionals="13" coveredconditionals="13" methods="7" coveredmethods="7"/>
       <file name="PropostaService.ts" path="C:\Users\jenif\Desktop\lemon-challenge\src\service\PropostaService.ts">
-        <metrics statements="25" coveredstatements="25" conditionals="10" coveredconditionals="10" methods="6" coveredmethods="6"/>
+        <metrics statements="30" coveredstatements="30" conditionals="13" coveredconditionals="13" methods="7" coveredmethods="7"/>
         <line num="1" count="26" type="stmt"/>
-        <line num="8" count="17" type="stmt"/>
-        <line num="12" count="6" type="stmt"/>
-        <line num="13" count="6" type="stmt"/>
-        <line num="16" count="6" type="cond" truecount="1" falsecount="0"/>
-        <line num="17" count="3" type="stmt"/>
-        <line num="25" count="3" type="stmt"/>
-        <line num="26" count="3" type="stmt"/>
-        <line num="30" count="3" type="stmt"/>
+        <line num="5" count="17" type="stmt"/>
+        <line num="9" count="6" type="stmt"/>
+        <line num="10" count="6" type="stmt"/>
+        <line num="12" count="6" type="cond" truecount="1" falsecount="0"/>
+        <line num="13" count="3" type="stmt"/>
+        <line num="21" count="3" type="stmt"/>
+        <line num="22" count="3" type="stmt"/>
+        <line num="24" count="3" type="stmt"/>
+        <line num="30" count="17" type="stmt"/>
+        <line num="33" count="15" type="stmt"/>
+        <line num="34" count="143" type="stmt"/>
+        <line num="37" count="15" type="stmt"/>
         <line num="40" count="17" type="stmt"/>
-        <line num="44" count="15" type="stmt"/>
-        <line num="45" count="143" type="stmt"/>
-        <line num="48" count="15" type="stmt"/>
-        <line num="51" count="17" type="stmt"/>
-        <line num="52" count="13" type="stmt"/>
-        <line num="54" count="13" type="stmt"/>
-        <line num="60" count="13" type="stmt"/>
-        <line num="66" count="13" type="cond" truecount="1" falsecount="0"/>
-        <line num="67" count="5" type="stmt"/>
-        <line num="71" count="13" type="cond" truecount="1" falsecount="0"/>
-        <line num="72" count="5" type="stmt"/>
-        <line num="77" count="13" type="stmt"/>
-        <line num="79" count="13" type="cond" truecount="7" falsecount="0"/>
-        <line num="80" count="3" type="stmt"/>
-        <line num="82" count="13" type="stmt"/>
+        <line num="41" count="13" type="stmt"/>
+        <line num="43" count="13" type="stmt"/>
+        <line num="49" count="13" type="stmt"/>
+        <line num="55" count="13" type="cond" truecount="1" falsecount="0"/>
+        <line num="56" count="5" type="stmt"/>
+        <line num="60" count="13" type="cond" truecount="1" falsecount="0"/>
+        <line num="61" count="5" type="stmt"/>
+        <line num="63" count="13" type="stmt"/>
+        <line num="68" count="13" type="cond" truecount="1" falsecount="0"/>
+        <line num="69" count="3" type="stmt"/>
+        <line num="71" count="13" type="stmt"/>
+        <line num="74" count="17" type="stmt"/>
+        <line num="75" count="13" type="cond" truecount="2" falsecount="0"/>
+        <line num="76" count="13" type="cond" truecount="2" falsecount="0"/>
+        <line num="77" count="13" type="cond" truecount="2" falsecount="0"/>
+        <line num="79" count="13" type="cond" truecount="3" falsecount="0"/>
       </file>
     </package>
     <package name="testes.mocks">

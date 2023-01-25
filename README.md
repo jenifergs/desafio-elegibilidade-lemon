@@ -1,4 +1,4 @@
-# Projeto API consulta de elegibilidade de Clientes Lemon
+# Projeto API consulta de elegibilidade de Clientes Lemon 
 ## Historia do Usuario:
     Nem todos os clientes que desejam fazer parte da Lemon podem ser aceitos no momento. Seja por razões regulatórias ou porque não vale a pena para o cliente ou para a Lemon ter essa empresa como cliente. No processo de aquisição de clientes, fazemos a checagem de elegibilidade da mesma, através dos dados contidos na conta de luz do cliente. Caso a empresa não seja elegível, precisamos explicitar os motivos para tal. Caso ela seja elegível, precisamos calcular também a projeção da quantidade de CO2 que ela deixaria de emitir caso usasse energia limpa.
   
@@ -16,7 +16,7 @@ O projeto em si é uma API desenvolvida em Node.JS com Typescript e express para
 | Swagger    | ^4.6.0   |
 | Supertest  | ^6.3.3   |
 
-## Instruções para o projeto:
+## Como rodar o projeto:
 1. Clonar este repositorio:
 ```
 git clone https://github.com/jenifergs/desafio-elegibilidade-lemon
@@ -36,4 +36,23 @@ O conteudo deverá ser parecido com:
 ![Swagger](./assets/lemon.png)
 5. (Opcional) Importar requisições automaticamente:
 
- 
+ [![Run in Insomnia}](https://insomnia.rest/images/run.svg)](https://insomnia.rest/run/?label=Desafio-elegibilidade-lemon&uri=https%3A%2F%2Fraw.githubusercontent.com%2Fjenifergs%2Fdesafio-elegibilidade-lemon%2Fmaster%2Fassets%2FInsomnia_desafio-elegibilidade-lemon)
+
+ 6. Executar os testes:
+ ```
+ npm test
+ ```
+ 7. (Opcional) Obter Cobertura de Testes
+ ```
+ npm run cov
+ ```
+ O resultado deverá ser parecido com:
+ ![Coverage](./assets/testes-lemon.png)
+## Instruções gerais
+- O codigo fonte encontra-se dentro da pasta src
+- O testes unitarios encontram-se dentro da pastas testes
+- O testes de integração encontram-se na pasta testes_integracao
+
+---
+
+### Feito com 💚 Por [Jenifer](https://jenifergs.github.io/my-social-links/) Para [Lemon](https://www.energialemon.com.br/) 🍋

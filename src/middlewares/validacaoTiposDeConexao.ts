@@ -8,10 +8,8 @@ const ValidacaoTiposDeConexao = (request: Request<Cliente>, response: Response, 
   ]
 
   if (!tiposDeConexao.includes(tipoDeConexao)) {
-    console.log('oi')
     return response.status(400).json({ error: 'Tipo de conexao inválida' })
   }
-  console.log('oi')
 
   next()
 }
