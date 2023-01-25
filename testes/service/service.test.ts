@@ -45,7 +45,7 @@ describe('Verificando Service', () => {
   );
 
   it('checa razão de inegebilidade: Tipo de conexão- monofasica', async () => {
-    const clienteInelegivel3 = copiaCom(propostaElegivel, { tipoDeConexao: 'monofasica', historicoDeConsumo: [0, 0, 30] });
+    const clienteInelegivel3 = copiaCom(propostaElegivel, { tipoDeConexao: 'monofasico', historicoDeConsumo: [0, 0, 30] });
     const razoesInelegibilidade = service.consultaRazoesInegebilidade(clienteInelegivel3, service.calculaConsumeMedio(clienteInelegivel3));
     console.log(razoesInelegibilidade);
     
@@ -54,7 +54,7 @@ describe('Verificando Service', () => {
   );
 
   it('checa razão de inegebilidade: Tipo de conexão - bifasica', async () => {
-    const clienteInelegivel3 = copiaCom(propostaElegivel, { tipoDeConexao: 'bifasica', historicoDeConsumo: [0, 0, 30] });
+    const clienteInelegivel3 = copiaCom(propostaElegivel, { tipoDeConexao: 'bifasico', historicoDeConsumo: [0, 0, 30] });
     const razoesInelegibilidade = service.consultaRazoesInegebilidade(clienteInelegivel3, service.calculaConsumeMedio(clienteInelegivel3));
     console.log(razoesInelegibilidade);
     
@@ -63,7 +63,7 @@ describe('Verificando Service', () => {
   );
 
   it('checa razão de inegebilidade: Tipo de conexão - trifasica', async () => {
-    const clienteInelegivel3 = copiaCom(propostaElegivel, { tipoDeConexao: 'trifasica', historicoDeConsumo: [0, 0, 30] });
+    const clienteInelegivel3 = copiaCom(propostaElegivel, { tipoDeConexao: 'trifasico', historicoDeConsumo: [0, 0, 30] });
     const razoesInelegibilidade = service.consultaRazoesInegebilidade(clienteInelegivel3, service.calculaConsumeMedio(clienteInelegivel3));
     console.log(razoesInelegibilidade);
     

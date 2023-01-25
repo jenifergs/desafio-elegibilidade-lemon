@@ -7,10 +7,10 @@
     "cov": "jest --coverage",
     "test": "jest",
     "dev": "tsnd --respawn --transpile-only src/server.ts",
-    "migrate": "npx sequelize-cli db:migrate",
     "fix": "npx eslint --fix src/**/*.{ts,tsx}",
     "build": "tsc -p tsconfig.json",
-    "start": "node build/server.js"
+    "start": "node build/server.js",
+    "prod": "npm run build && npm run start"
   },
   "keywords": [],
   "author": "",

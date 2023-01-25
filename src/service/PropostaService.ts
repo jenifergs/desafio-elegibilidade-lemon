@@ -60,20 +60,28 @@ export default class PropostaService {
     if (!modalidadesTarifariasElegiveis.includes(proposta.modalidadeTarifaria)) {
       razoesInelegibilidade.push('Modalidade tarifaria não aceita')
     }
+    const consumoInvalido = this.calculoConsumoInvalido(proposta, consumoMedio)
     // se o cliente tiver o tipo de conexao monofasica entao consumo medio nao pode ser menor que 400
     // se o cliente tiver o tipo de conexao bifasica entao consumo medio nao pode ser menor que 500
     // se o cliente tiver o tipo de conexao trifasica entao consumo medio nao pode ser menor que 750
+    console.log(consumoInvalido, 'consumoInvalido')
 
-    if (this.calculoConsumoInvalido(proposta, consumoMedio)) {
+    if (consumoInvalido) {
       razoesInelegibilidade.push('Consumo muito baixo para tipo de conexão') // adicionar ao array indicando as razoes de inelegibilidade da proposta
     }
     return razoesInelegibilidade
   }
 
   private readonly calculoConsumoInvalido = (proposta: Cliente, consumoMedio: number): boolean => {
-    const condicaoMonofasica = proposta.tipoDeConexao === 'monofasica' && consumoMedio < 400
-    const condicaoBifasica = proposta.tipoDeConexao === 'bifasica' && consumoMedio < 500
-    const condicaoTrifasica = proposta.tipoDeConexao === 'trifasica' && consumoMedio < 750
+    console.log(consumoMedio)
+
+    const condicaoMonofasica = proposta.tipoDeConexao === 'monofasico' && consumoMedio < 400
+    const condicaoBifasica = proposta.tipoDeConexao === 'bifasico' && consumoMedio < 500
+    const condicaoTrifasica = proposta.tipoDeConexao === 'trifasico' && consumoMedio < 750
+    console.log(condicaoMonofasica, 'condicaoMonofasica')
+    console.log(condicaoBifasica, 'condicaoBifasica')
+    console.log(condicaoTrifasica, 'condicaoTrifasica')
+
     return condicaoMonofasica || condicaoBifasica || condicaoTrifasica
   }
 }
