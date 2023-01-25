@@ -55,4 +55,4 @@ O conteudo deverá ser parecido com:
 
 ---
 
-### Feito com 💚 Por [Jenifer](https://jenifergs.github.io/my-social-links/) Para [Lemon](https://www.energialemon.com.br/) 🍋
+### Feito com 💚 Por [Jenifer Gonçalves](https://jenifergs.github.io/my-social-links/) Para [Lemon Energia](https://www.energialemon.com.br/) 🍋
