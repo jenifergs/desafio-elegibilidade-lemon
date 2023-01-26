@@ -29,7 +29,7 @@ class App {
     this.app.use(accessControl) // adiciona middleware global para liberação de cors
 
     // read swagger file swagger.yml (configurando o site do swagger)
-    const swaggerDocument = YAML.load('../swagger.yml')
+    const swaggerDocument = YAML.load('swagger.yml')
     this.app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument)) // rota /api-docs exiba frontend do swagger
   }
 

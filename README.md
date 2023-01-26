@@ -25,24 +25,28 @@ git clone https://github.com/jenifergs/desafio-elegibilidade-lemon
 ```
 cd desafio-elegibilidade-lemon
 ```
-3. Executar o comando para subir em produção:
+3. Instalar dependencias
+```
+npm i
+```
+4. Executar o comando para subir em produção:
 ```
 npm run prod
 ```
-4. (Opcional) Verificar a documentação (SWAGGER) das rotas:
+5. (Opcional) Verificar a documentação (SWAGGER) das rotas:
 Uma vez online, o servidor deve expor na roda /api-docs o
 site contendo o [swagger](http://localhost:5433/api-docs/)
 O conteudo deverá ser parecido com:
 ![Swagger](./assets/lemon.png)
-5. (Opcional) Importar requisições automaticamente:
+6. (Opcional) Importar requisições automaticamente:
 
  [![Run in Insomnia}](https://insomnia.rest/images/run.svg)](https://insomnia.rest/run/?label=Desafio-elegibilidade-lemon&uri=https%3A%2F%2Fraw.githubusercontent.com%2Fjenifergs%2Fdesafio-elegibilidade-lemon%2Fmaster%2Fassets%2FInsomnia_desafio-elegibilidade-lemon)
 
- 6. Executar os testes:
+ 7. Executar os testes:
  ```
  npm test
  ```
- 7. (Opcional) Obter Cobertura de Testes
+ 8. (Opcional) Obter Cobertura de Testes
  ```
  npm run cov
  ```
