@@ -17,6 +17,7 @@
   "license": "ISC",
   "dependencies": {
     "cors": "^2.8.5",
+    "cpf-cnpj-validator": "^1.0.3",
     "express": "^4.18.2",
     "swagger-ui-express": "^4.6.0",
     "ts-node": "^10.9.1",

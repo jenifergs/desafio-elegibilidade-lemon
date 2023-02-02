@@ -33,13 +33,11 @@ export default class PropostaService {
     const consumo = proposta.historicoDeConsumo.reduce((total, consumo) => {
       return total + consumo
     }, 0)
-
-    return consumo / 12
+    return consumo / proposta.historicoDeConsumo.length
   }
 
   public consultaRazoesInegebilidade = (proposta: Cliente, consumoMedio: number): string[] => {
     const razoesInelegibilidade = []
-
     const classesDeConsumoElegiveis = [
       'residencial',
       'industrial',
