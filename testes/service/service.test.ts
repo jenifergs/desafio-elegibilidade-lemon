@@ -2,7 +2,7 @@ import Cliente from "../../src/interfaces/Cliente";
 import PropostaService from "../../src/service/PropostaService";
 import { copiaCom, propostaElegivel, propostaInelegivel } from "../mocks/proposta.mock";
 
-describe('Verificando Service', () => {
+describe('Testando Service', () => {
   let service: PropostaService;
   beforeEach(() => {
     service = new PropostaService();

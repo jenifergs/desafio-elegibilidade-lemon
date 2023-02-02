@@ -6,7 +6,7 @@ import ValidacaoTiposDeConexao from "../../src/middlewares/validacaoTiposDeConex
 import ValidacaoClasseConsumo from "../../src/middlewares/validacaoClasseConsumo";
 import ValidacaoHistoricoDeConsumo from "../../src/middlewares/validacaoHistoricoDeConsumo";
 
-describe('testando middlewares', () => {
+describe('Testando middlewares', () => {
   it('Middleware - MODALIDADE TARIFARIA : deve retornar erro quando a modalidade tarifaria for inválida', () => {
     const req = {
       body: {
