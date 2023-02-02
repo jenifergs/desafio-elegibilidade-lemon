@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "cov": "jest --coverage",
-    "test": "jest",
+    "test": "jest --verbose",
     "dev": "tsnd --respawn --transpile-only src/server.ts",
     "fix": "npx eslint --fix src/**/*.{ts,tsx}",
     "build": "tsc -p tsconfig.json",
