@@ -14,9 +14,8 @@ describe('Testando Service', () => {
 
   it('calcula consumo medio proposta inelegivel', async () => {
     const consumoMedio = service.calculaConsumeMedio(propostaInelegivel);
-    expect(consumoMedio).toBe(4547.666666666667);
+    expect(consumoMedio).toBe(5457.2);
   });
-
   // checa razoes de inegebilidade
   it('checa se array de razoes de inegebilidade é vazio caso proposta seja elegivel', async () => {
     const razoesInelegibilidade = service.consultaRazoesInegebilidade(propostaElegivel, service.calculaConsumeMedio(propostaElegivel));

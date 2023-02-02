@@ -1,14 +1,20 @@
 import { AddressInfo } from "node:net";
 import request from "supertest";
 import { app, App } from "../src/App";
-import { propostaElegivel, propostaInelegivel, copiaCom } from "../testes/mocks/proposta.mock";
-import { respostaPropostaAceita, respostaPropostaRecusada } from "../testes/mocks/respostas.mock";
+import { propostaElegivel, propostaInelegivel, copiaCom, propostaElegivel2 } from "../testes/mocks/proposta.mock";
+import { respostaPropostaAceita, respostaPropostaRecusada, respostaPropostaAceita2} from "../testes/mocks/respostas.mock";
 
-describe.only('Testes de integração', () => {
+describe('Testes de integração', () => {
 it('Verificando se o endpoint /proposta retorna status 200', async () => {
   const response = await request(app).post('/proposta').send(propostaElegivel)
   expect(response.status).toBe(200);
   expect(response.body).toEqual(respostaPropostaAceita);
+})
+
+it('Verificando se o endpoint /proposta retorna status 200', async () => {
+  const response = await request(app).post('/proposta').send(propostaElegivel2)
+  expect(response.status).toBe(200);
+  expect(response.body).toEqual(respostaPropostaAceita2);
 })
 
 it('Verificando se o endpoint /proposta retorna status 200', async () => {

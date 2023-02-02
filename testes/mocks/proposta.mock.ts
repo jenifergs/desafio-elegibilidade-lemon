@@ -1,7 +1,7 @@
 import Cliente from "../../src/interfaces/Cliente";
 
 const propostaElegivel: Cliente = {
-  numeroDoDocumento: "14041737706",
+  numeroDoDocumento: "85839831514",
   tipoDeConexao: "bifasico",
   classeDeConsumo: "comercial",
   modalidadeTarifaria: "convencional",
@@ -21,8 +21,20 @@ const propostaElegivel: Cliente = {
   ]
 }
 
+const propostaElegivel2: Cliente = {
+  numeroDoDocumento: "85839831514",
+  tipoDeConexao: "bifasico",
+  classeDeConsumo: "comercial",
+  modalidadeTarifaria: "convencional",
+  historicoDeConsumo: [
+    1000, // mes atual
+    1000, // mes anterior
+    1000, // 2 meses atras
+  ]
+}
+
 const propostaInelegivel: Cliente ={
-    numeroDoDocumento: "14041737706",
+    numeroDoDocumento: "85839831514",
     tipoDeConexao: "bifasico",
     classeDeConsumo: "rural",
     modalidadeTarifaria: "verde",
@@ -45,4 +57,4 @@ const propostaInelegivel: Cliente ={
   };
 
 
-export { propostaElegivel, propostaInelegivel, copiaCom};
+export { propostaElegivel, propostaInelegivel, copiaCom, propostaElegivel2};

@@ -37,7 +37,7 @@ describe('Testando controller', () => {
     expect(res.json).toHaveBeenCalledWith(respostaPropostaRecusada)
   })
 
-  it('Verificando retorno de status 200 caso proposta seja elegivel', async () => {
+  it('Verificando retorno de status 400, caso proposta seja elegivel porém aconteça um erro desconhecido no service', async () => {
     const req = {
       body: propostaElegivel
     }

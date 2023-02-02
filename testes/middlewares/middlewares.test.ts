@@ -63,7 +63,24 @@ describe('Testando middlewares', () => {
   it('Middleware - NUMERO DO DOCUMENTO(CPF) : deve chamar o next quando o numero do documento for válido', () => {
     const req = {
       body: {
-        numeroDoDocumento: '12345678901'
+        numeroDoDocumento: '85839831514'
+      }
+    }
+    const res = {
+      status: jest.fn().mockReturnThis(),
+      json: jest.fn()
+    }
+    const next = jest.fn();
+
+    ValidacaoNumeroDoDocumento(req as Request<Cliente>, res as unknown as Response, next);
+
+    expect(next).toHaveBeenCalled();
+  })
+
+  it('Middleware - NUMERO DO DOCUMENTO(CNPJ) : deve chamar o next quando o numero do documento for válido', () => {
+    const req = {
+      body: {
+        numeroDoDocumento: '48351312000176'
       }
     }
     const res = {

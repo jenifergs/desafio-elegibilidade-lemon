@@ -5,6 +5,13 @@ const respostaPropostaAceita = {
     }
 }
 
+const respostaPropostaAceita2 = {
+  resultado: {
+    elegivel: true,
+    economiaAnualDeCO2: 1008,
+  }
+}
+
 const respostaPropostaRecusada = {
   resultado: {
     elegivel: false,
@@ -15,4 +22,4 @@ const respostaPropostaRecusada = {
   }
 }
 
-export {respostaPropostaAceita, respostaPropostaRecusada}
+export {respostaPropostaAceita, respostaPropostaRecusada, respostaPropostaAceita2}
